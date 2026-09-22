@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dashboard-generator"
+version = "1.0.0"
+description = "Generate polished, self-contained HTML dashboards from local JSON or CSV data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Radwan Abdulhadi Ahmed"}]
+keywords = ["dashboard", "csv", "json", "html", "reporting"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+dashboard-generator = "dashboard_generator.cli:main"
+
+[project.urls]
+Repository = "https://github.com/rad03i2/dashboard-generator"
+
+[tool.setuptools.packages.find]
+where = ["src"]
